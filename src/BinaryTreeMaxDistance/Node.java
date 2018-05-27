@@ -1,4 +1,4 @@
-package BinaryTreeMaxDistance;
+package binaryTreeMaxDistance;
 
 public class Node {
 	public int data;

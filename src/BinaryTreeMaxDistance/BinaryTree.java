@@ -1,4 +1,4 @@
-package BinaryTreeMaxDistance;
+package binaryTreeMaxDistance;
 
 public class BinaryTree {
 	private int maxLen = 0;

@@ -1,4 +1,4 @@
-package FullPermutation;
+package fullPermutation;
 
 /**
  * 
