@@ -15,6 +15,13 @@ package reverseSingleList;
 public class ReserveSingleList {
 
 	//递归
+	/**
+	 * 这里也是要断开链表，
+	 * 例如： a b c ,我们要处理a,则需要先处理b，推出得先处理c，
+	 * c返回，然后b.next是c, 让b.next.next = b;
+	 * 然后又返回一步，回去得还是c，此时处理a,a.next是b，将a.next.next = a ,最后a.next = null,结,返回c
+	 * 
+	 */
 	public static ListNode reverseSingleList(ListNode head) {
 		ListNode p = head;
 		if (p == null || p.next == null) {
