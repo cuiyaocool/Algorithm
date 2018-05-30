@@ -1,7 +1,5 @@
 package linkedListMeet;
 
-import java.util.List;
-
 /**
  * @author Administrator
  * 两个链表是否相交
