@@ -37,7 +37,7 @@ public class LinkedListMeet {
 		return meet;
 	}
 	
-	////不带环,判断相交2
+	//不带环,判断相交2
 	public static boolean isMeet2(ListNode first, ListNode second) {
 		ListNode p1 = first, p2 = second;
 		if (p1 == null || p2 == null) {
