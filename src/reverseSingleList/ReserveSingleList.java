@@ -26,6 +26,14 @@ public class ReserveSingleList {
 		return backNode;
 	}
 	//遍历
+	/**
+	 * 这里犯的错是总使得该链表连在一起，所以就有了注释掉的那行p.next = next;
+	 * 之前想的是，a b c 三点，a 为第一个点，然后a.next = c;  b.next = a;  这样链表总是连着的，但问题是，我可以一直走，
+	 * 但到最后只有第一个节点到了最后，就像冒泡一样，一趟只完成了一个，同时，b就是一趟之后的头结点，相当于成了 b c a, 这么看，下一趟就没法走了，再走就是 c a b ，不正确
+	 * 所以，正确思路是
+	 * 将链表打断，每次使得后一个指向前一个
+	 * 
+	 */
 	public static ListNode reverseSingleList2(ListNode head) {
 		if (head == null) {
 			return head;
