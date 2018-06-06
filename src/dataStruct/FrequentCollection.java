@@ -149,7 +149,7 @@ public class FrequentCollection {
 			}
 			fc.tail = fc.tail.next;
 		}
-		
 	}
 }
+
 
