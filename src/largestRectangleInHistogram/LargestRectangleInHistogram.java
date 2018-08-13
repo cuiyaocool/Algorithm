@@ -51,6 +51,10 @@ public class LargestRectangleInHistogram {
 		
 		max = findMaxRectangle2(histogram, histogram.length);
 		System.out.println("LargestRectangleInHistogram:" + max);
+		
+		int[] histogram1 = {2,1,5,6,2,3};
+		System.out.println(findMaxRectangle(histogram1, histogram1.length));
+		System.out.println(findMaxRectangle2(histogram1, histogram1.length));
 	}
 
 	public static int findMaxRectangle2(int[] hist, int n) {
@@ -62,11 +66,10 @@ public class LargestRectangleInHistogram {
 			max = Math.max(max, arr[i]);
 			for (int j = i - 1; j >= 0; j--) {
 				if (arr[j] > arr[i]) {
-					max = Math.max(max, arr[j] * (i - j));
+					max = Math.max(max, arr[i] * (i - j + 1));
 					arr[j] = arr[i];
 				} else {
-					max = Math.max(max, arr[j] * (i + 1));
-					break;
+					max = Math.max(max, arr[j] * (i - j + 1));
 				}
 			}
 		}
