@@ -57,6 +57,7 @@ public class LongesetIncreasingSubsequence {
 				}
 				list.set(j, num);//用set替换掉在num之前且大于num的数
 			}
+			System.out.println(list.toString());
 		}
 		return list.size();
 	}
@@ -66,7 +67,8 @@ public class LongesetIncreasingSubsequence {
 		int[] nums = {2, 3, 5, 4, 7, 0, 9};
 		int len = lengthOfLIS1(nums);
 		System.out.println(len);
-		int len2 = lengthOfLIS2(nums);
+		int[] nums1 = {1, 3, 5,4, 3, 0, 9};
+		int len2 = lengthOfLIS2(nums1);
 		System.out.println(len2);
 	}
 
