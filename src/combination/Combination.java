@@ -58,12 +58,38 @@ public class Combination {
 		
 	}
 	
+	private static void myCombination(char[] cs){
+		int[] nums = new int[cs.length];
+		myCombination(cs, 0, cs.length-1, nums);
+	}
+	
+	private static void myCombination(char[] cs, int s, int e, int[] nums) {
+		// TODO Auto-generated method stub
+		if (s == e+1) {
+			String string = "";
+			for (int i = 0; i < nums.length; i++) {
+				if (nums[i] == 1) {
+					string+=cs[i];
+				}
+			}
+			System.out.println(string);
+			return;
+		}
+		nums[s] = 1;
+		myCombination(cs, s+1, e, nums);
+		nums[s] = 0;
+		myCombination(cs, s+1, e, nums);
+	}
+
 	public static void main(String[] args) {
 		String sourceString = "abc";
 		char[] cs = sourceString.toCharArray();
 		combination(cs);
 		System.out.println("-------------------");
 		combination1(cs);
+		System.out.println("-------------------");
+		//myCombination
+		myCombination(cs);
 		/*
 	    a  
 		b  
