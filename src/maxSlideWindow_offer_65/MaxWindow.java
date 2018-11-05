@@ -1,4 +1,7 @@
 package maxSlideWindow_offer_65;
+/**
+ * 给定一个数组和滑动窗口的大小，请找出所有滑动窗口里的最大值。
+ */
 
 import java.util.ArrayList;
 import java.util.List;
