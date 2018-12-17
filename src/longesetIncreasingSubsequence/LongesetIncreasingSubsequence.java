@@ -49,7 +49,7 @@ public class LongesetIncreasingSubsequence {
 				int j = list.size() - 1;
 				while (i < j) {
 					int mid = (i + j)/2;
-					if (num > nums[mid]) {
+					if (num > list.get(mid)) {
 						i = mid + 1;
 					} else {
 						j = mid;
@@ -70,6 +70,8 @@ public class LongesetIncreasingSubsequence {
 		int[] nums1 = {1, 3, 5,4, 3, 0, 9};
 		int len2 = lengthOfLIS2(nums1);
 		System.out.println(len2);
+		int[] nums3 = {1, 6, 8, 2, 4, 5, 7, 3};
+		System.out.println(lengthOfLIS2(nums3));
 	}
 
 }
